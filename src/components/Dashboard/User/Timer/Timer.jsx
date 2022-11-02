@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { timeFormatter } from '../../../../helpers/timeFormatter';
 import { getCurrentUser, changeUserKey } from '../../../../helpers/userHelpers';
+import './Timer.css'
 
 const rate = 0.02777;
 
@@ -35,7 +36,7 @@ export default function Timer({ user, setUsers }) {
       setUsers((prev) => changeUserKey(prev, user.id, 'start', Date.now()));
       startTimer();
     } else {
-      alert('Fill all fields');
+      alert('Заповніть усі поля');
     }
   }
   function end() {
@@ -86,16 +87,16 @@ export default function Timer({ user, setUsers }) {
         <button
           className={`btn userBtn ${user.end ? 'userBtnStopped' : ''}`}
           onClick={start}>
-          Start
+          Почати
         </button>
       )}
       {user.start && !user.end && (
         <>
           <button className="btn userBtn" onClick={pause}>
-            {isPaused ? 'Continue' : 'Pause'}
+            {isPaused ? 'Продовжити' : 'Пауза'}
           </button>
           <button className="btn userBtn" onClick={end}>
-            Stop
+            Зупинити
           </button>
         </>
       )}

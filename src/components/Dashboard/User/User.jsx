@@ -36,7 +36,7 @@ export default function User({ user, setUsers }) {
         name="name"
         onChange={(e) => changeName(e, 'name1')}
         defaultValue={user.name1}
-        placeholder="Name1"
+        placeholder="Прізвище Ім'я"
         // list="users"
       />
       {/* <datalist id="users">
@@ -54,7 +54,7 @@ export default function User({ user, setUsers }) {
           name="name"
           onChange={(e) => changeName(e, 'name2')}
           defaultValue={user.name2}
-          placeholder="Name2"
+          placeholder="Прізвище Ім'я"
         />
       )}
       <div className="select">
@@ -64,12 +64,12 @@ export default function User({ user, setUsers }) {
           defaultValue={user.hall}
           onChange={changeHall}>
           <option value="" disabled>
-            Select hall
+            Оберіть залу
           </option>
-          <option value="1">Hall 1</option>
-          <option value="2">Hall 2</option>
-          <option value="3">Hall 3</option>
-          <option value="4">Hall 4</option>
+          <option value="1">Велика зала</option>
+          <option value="2">Середня зала</option>
+          <option value="3">Мала зала, другий поверх</option>
+          <option value="4">Мала зала, перший поверх</option>
         </select>
       </div>
       <div className="select">
@@ -79,10 +79,10 @@ export default function User({ user, setUsers }) {
           defaultValue={user.type}
           onChange={changeType}>
           <option value="" disabled>
-            Select type
+            Оберіть тип тренування
           </option>
-          <option value="private">Private</option>
-          <option value="self">Self</option>
+          <option value="private">Індивідуальний урок</option>
+          <option value="self">Самопідготовка</option>
         </select>
       </div>
       <Timer user={user} setUsers={setUsers} />
@@ -96,7 +96,7 @@ function DeleteIcon() {
       className="delete-svg"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512">
-      <title>Delete</title>
+      <title>Видалити</title>
       <path
         d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"
         fill="none"

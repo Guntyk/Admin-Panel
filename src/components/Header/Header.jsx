@@ -21,7 +21,7 @@ export default function Header({ setUsers }) {
           <Hamburger/>
           <a href="/" className="logo-h"></a>
           <div className="header-btns">
-            <button className='btn' onClick={addUser}>Add</button>
+            <button className='btn' onClick={addUser}>Додати</button>
           </div>
       </div>
     </header>
