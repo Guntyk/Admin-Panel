@@ -82,7 +82,7 @@ export default function Timer({ user, setUsers }) {
   }
   return (
     <>
-      <div className='timer' disabled>{timeFormatter(time)}</div>
+      <div className='timer btn pill' id='timer' disabled>{timeFormatter(time)}</div>
       {!user.start && (
         <button
           className={`btn userBtn ${user.end ? 'userBtnStopped' : ''}`}
@@ -100,7 +100,7 @@ export default function Timer({ user, setUsers }) {
           </button>
         </>
       )}
-      <input className="btn price" type="text" readOnly value={price + `₴`} />
+      <input className="btn price pill" type="text" readOnly value={price + `₴`} />
     </>
   );
 }

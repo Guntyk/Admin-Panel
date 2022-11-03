@@ -128,11 +128,17 @@ html {
 }
 button,
 input {
+  
   border: none;
   outline: none;
 }
 button {
   cursor: pointer;
+}
+input, select {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 :root {

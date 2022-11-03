@@ -19,7 +19,7 @@ export default function User({ user, setUsers }) {
     if (user.end || !user.start) {
       setUsers((prev) => prev.filter((item) => item.id !== user.id));
     } else {
-      alert('Please, end the session');
+      alert('Будь ласка, завершіть сессію');
     }
   }
   function addName2() {
@@ -37,15 +37,19 @@ export default function User({ user, setUsers }) {
         onChange={(e) => changeName(e, 'name1')}
         defaultValue={user.name1}
         placeholder="Прізвище Ім'я"
-        // list="users"
+        list="users"
       />
-      {/* <datalist id="users">
-        <option value="Chocolate" />
-        <option value="Coconut" />
-        <option value="Mint" />
-        <option value="Strawberry" />
-        <option value="Vanilla" />
-      </datalist> */}
+      <datalist id="users">
+        <option value="Машин Даниїл" />
+        <option value="Пурденко Даяна" />
+        <option value="Биковець Денис" />
+        <option value="Поліщук Олександра" />
+        <option value="Загребельний Олексій" />
+        <option value="Самойленко Арина" />
+        <option value="Загребельний Андрій" />
+        <option value="Кравець Владислав" />
+        <option value="Дем'яненко Семен" />
+      </datalist>
       {user.name2 === null && <button className='add-user' onClick={addName2}>+</button>}
       {user.name2 !== null && (
         <input
@@ -55,6 +59,7 @@ export default function User({ user, setUsers }) {
           onChange={(e) => changeName(e, 'name2')}
           defaultValue={user.name2}
           placeholder="Прізвище Ім'я"
+          list="users"
         />
       )}
       <div className="select">

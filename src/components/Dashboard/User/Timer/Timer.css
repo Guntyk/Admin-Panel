@@ -1,3 +1,29 @@
 .timer {
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill {
+  width: 150px;
+  height: 92%;
+  pointer-events: none;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  background: none;
+  outline: 3px solid #000;
+}
+
+.timer.working {
+  background: none;
+  color: rgb(0, 231, 0);
+  box-shadow: 0 0 20px rgba(0, 231, 0, 0.2);
+  outline: 3px solid rgb(0, 231, 0);
+}
+.timer.paused {
+  background: none;
+  color: rgb(231, 0, 0);
+  box-shadow: 0 0 20px rgba(231, 0, 0, 0.2);
+  outline: 3px solid rgb(231, 0, 0);
 }
